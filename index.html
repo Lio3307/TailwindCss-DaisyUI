@@ -31,7 +31,7 @@
           </div>
           <ul
             tabindex="0"
-            class="menu lg:hidden menu-sm dropdown-content bg-base-200 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            class="menu lg:hidden menu-sm dropdown-content bg-base-300 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
               <a>
@@ -135,6 +135,61 @@
           </a>
         </li>
       </ul>
+    </div>
+
+    <!-- FeedBack -->
+    <div
+      class="max-w-md mx-auto my-10 p-6 grid grid-cols-1 bg-base-200 rounded-xl shadow space-y-3"
+    >
+      <h3 class="text-2xl font-semibold text-center">Feedback</h3>
+
+      <!-- Input email -->
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Email Address</span>
+        </label>
+        <label class="input input-bordered flex items-center gap-2">
+          <svg
+            class="w-5 h-5 text-base-content/70"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <input
+            class="w-3"
+            type="email"
+            placeholder="mail@site.com"
+            class="grow"
+            required
+          />
+        </label>
+
+        <div class="container my-5">
+          <fieldset class="fieldset">
+            <legend class="fieldset-legend">Your Feed Back</legend>
+            <textarea
+              class="textarea h-24"
+              placeholder="Feed Back..."
+            ></textarea>
+          </fieldset>
+        </div>
+
+        <span class="text-sm text-error hidden validator-hint">
+          Enter a valid email address
+        </span>
+      </div>
+
+      <!-- Tombol kirim (opsional) -->
+      <div class="text-center">
+        <button class="btn btn-primary w-full">Submit Feedback</button>
+      </div>
     </div>
   </body>
 </html>
