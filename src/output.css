@@ -1121,6 +1121,27 @@
     min-height: 1lh;
     transition: background-color 0.2s ease-out;
   }
+  .menu-horizontal {
+    display: inline-flex;
+    flex-direction: row;
+    & > li:not(.menu-title) > details > ul {
+      position: absolute;
+      margin-inline-start: calc(0.25rem * 0);
+      margin-top: calc(0.25rem * 4);
+      padding-block: calc(0.25rem * 2);
+      padding-inline-end: calc(0.25rem * 2);
+    }
+    & > li > details > ul {
+      &:before {
+        content: none;
+      }
+    }
+    :where(& > li:not(.menu-title) > details > ul) {
+      border-radius: var(--radius-box);
+      background-color: var(--color-base-100);
+      box-shadow: 0 1px 3px 0 oklch(0% 0 0/0.1), 0 1px 2px -1px oklch(0% 0 0/0.1);
+    }
+  }
   .checkbox {
     border: var(--border) solid var(--input-color, var(--color-base-content));
     @supports (color: color-mix(in lab, red, red)) {
@@ -1926,6 +1947,9 @@
   .flex {
     display: flex;
   }
+  .hidden {
+    display: none;
+  }
   .inline-flex {
     display: inline-flex;
   }
@@ -2528,6 +2552,16 @@
   .lg\:mb-0 {
     @media (width >= 64rem) {
       margin-bottom: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:flex {
+    @media (width >= 64rem) {
+      display: flex;
+    }
+  }
+  .lg\:hidden {
+    @media (width >= 64rem) {
+      display: none;
     }
   }
   .lg\:w-1\/3 {
